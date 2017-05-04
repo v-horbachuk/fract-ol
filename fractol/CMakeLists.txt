@@ -7,7 +7,7 @@ include_directories(./../i) # headers
 link_directories(libft minilibx) # libraries
 
 set(SOURCE_FILES
-       colour.c fractals.c fractals_2.c main.c fdg.c) # sources
+       colour.c fractals.c fractals_2.c main.c) # sources
 
 add_executable(fractol ${SOURCE_FILES}) # compilation
 
