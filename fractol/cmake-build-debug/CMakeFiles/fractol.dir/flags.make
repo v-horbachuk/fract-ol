@@ -6,5 +6,5 @@ C_FLAGS =  -Wall -Werror -Wextra -g
 
 C_DEFINES = 
 
-C_INCLUDES = -I/nfs/2016/v/vhorbach/Documents/Projects/fractol/./../i 
+C_INCLUDES = -I/nfs/2016/v/vhorbach/Documents/Projects/fract-ol/fractol/./../i 
 

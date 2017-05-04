@@ -48,10 +48,10 @@ RM = /Applications/CLion.app/Contents/bin/cmake/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /nfs/2016/v/vhorbach/Documents/Projects/fractol
+CMAKE_SOURCE_DIR = /nfs/2016/v/vhorbach/Documents/Projects/fract-ol/fractol
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /nfs/2016/v/vhorbach/Documents/Projects/fractol/cmake-build-debug
+CMAKE_BINARY_DIR = /nfs/2016/v/vhorbach/Documents/Projects/fract-ol/fractol/cmake-build-debug
 
 #=============================================================================
 # Targets provided globally by CMake.
@@ -80,9 +80,9 @@ rebuild_cache/fast: rebuild_cache
 
 # The main all target
 all: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /nfs/2016/v/vhorbach/Documents/Projects/fractol/cmake-build-debug/CMakeFiles /nfs/2016/v/vhorbach/Documents/Projects/fractol/cmake-build-debug/CMakeFiles/progress.marks
+	$(CMAKE_COMMAND) -E cmake_progress_start /nfs/2016/v/vhorbach/Documents/Projects/fract-ol/fractol/cmake-build-debug/CMakeFiles /nfs/2016/v/vhorbach/Documents/Projects/fract-ol/fractol/cmake-build-debug/CMakeFiles/progress.marks
 	$(MAKE) -f CMakeFiles/Makefile2 all
-	$(CMAKE_COMMAND) -E cmake_progress_start /nfs/2016/v/vhorbach/Documents/Projects/fractol/cmake-build-debug/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /nfs/2016/v/vhorbach/Documents/Projects/fract-ol/fractol/cmake-build-debug/CMakeFiles 0
 .PHONY : all
 
 # The main clean target
@@ -149,6 +149,33 @@ colour.s: colour.c.s
 colour.c.s:
 	$(MAKE) -f CMakeFiles/fractol.dir/build.make CMakeFiles/fractol.dir/colour.c.s
 .PHONY : colour.c.s
+
+fdg.o: fdg.c.o
+
+.PHONY : fdg.o
+
+# target to build an object file
+fdg.c.o:
+	$(MAKE) -f CMakeFiles/fractol.dir/build.make CMakeFiles/fractol.dir/fdg.c.o
+.PHONY : fdg.c.o
+
+fdg.i: fdg.c.i
+
+.PHONY : fdg.i
+
+# target to preprocess a source file
+fdg.c.i:
+	$(MAKE) -f CMakeFiles/fractol.dir/build.make CMakeFiles/fractol.dir/fdg.c.i
+.PHONY : fdg.c.i
+
+fdg.s: fdg.c.s
+
+.PHONY : fdg.s
+
+# target to generate assembly for a file
+fdg.c.s:
+	$(MAKE) -f CMakeFiles/fractol.dir/build.make CMakeFiles/fractol.dir/fdg.c.s
+.PHONY : fdg.c.s
 
 fractals.o: fractals.c.o
 
@@ -243,6 +270,9 @@ help:
 	@echo "... colour.o"
 	@echo "... colour.i"
 	@echo "... colour.s"
+	@echo "... fdg.o"
+	@echo "... fdg.i"
+	@echo "... fdg.s"
 	@echo "... fractals.o"
 	@echo "... fractals.i"
 	@echo "... fractals.s"
