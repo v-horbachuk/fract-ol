@@ -87,9 +87,6 @@
 		<Unit filename="/nfs/2016/v/vhorbach/Documents/Projects/fract-ol/fractol/colour.c">
 			<Option target="fractol"/>
 		</Unit>
-		<Unit filename="/nfs/2016/v/vhorbach/Documents/Projects/fract-ol/fractol/fdg.c">
-			<Option target="fractol"/>
-		</Unit>
 		<Unit filename="/nfs/2016/v/vhorbach/Documents/Projects/fract-ol/fractol/fractals.c">
 			<Option target="fractol"/>
 		</Unit>

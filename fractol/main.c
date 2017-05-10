@@ -55,6 +55,39 @@ int		key_hook(int keycode, t_all *all)
 	return (0);
 }
 
+int 	mouse_hook(int button, int x, int y, t_all *all)
+{
+	printf("%d\n%d\n", x , y);
+	if (button == 4)
+	{
+		all->fract.zoom = all->fract.zoom + .02;
+	}
+	else if (button == 5)
+	{
+		all->fract.zoom = all->fract.zoom - .02;
+	}
+//	else if (button == 1)
+//	{
+//		if (all->fract.flag == 1 || all->fract.flag == 3)
+//		{
+//			all->fract.cr = all->fract.cr + x / 100;
+//			all->fract.ci = all->fract.ci + y / 100;
+//		}
+//		else
+//		{
+//			all->fract.pr += 1;
+//			all->fract.pi += 1;
+//		}
+//	}
+	changed_fract(all);
+	return (0);
+}
+
+void	ft_treads(t_all *all)
+{
+
+}
+
 void	ft_window(int code, t_all *all)
 {
 	all->mlx.mlx = mlx_init();
@@ -78,6 +111,8 @@ void	ft_window(int code, t_all *all)
 		ft_julia3_1(all);
 	}
 	mlx_hook(all->mlx.win, 2, 3, key_hook, all);
+	mlx_mouse_hook(all->mlx.win, mouse_hook, all);
+	//mlx_hook(all->mlx.win, 6, 2, mouse_hook, all);
 	mlx_loop(all->mlx.mlx);
 }
 
@@ -102,7 +137,7 @@ void	say_error(int code)
 	}
 	else
 		ft_putstr("A long time ago, in a galaxy far, far away..."
-							"Farct'ol crashed!\n");
+							"Fract'ol crashed!\n");
 	exit(0);
 }
 
@@ -118,7 +153,7 @@ void	ft_find_fract(char *str, t_all *all)
 		all->fract.flag = 2;
 		ft_window(2, all);
 	}
-	else if (ft_strcmp(str, "J3") == 0)
+	else if (ft_strcmp(str, "J1") == 0)
 	{
 		all->fract.flag = 3;
 		ft_window(3, all);
@@ -141,16 +176,15 @@ int		main(int ac, char **av)
 		say_error(1);
 	else
 	{
-		pid = fork();
-		if (pid == 0)
+		while (i < ac)
 		{
-			all->fract.string = av[1];
-			ft_find_fract(all->fract.string, all);
-		}
-		else
-		{
-			all->fract.string = av[2];
-			ft_find_fract(all->fract.string, all);
+			pid = fork();
+			if (pid == 0)
+			{
+				all->fract.string = av[i];
+				ft_find_fract(all->fract.string, all);
+			}
+			i++;
 		}
 	}
 	return (0);

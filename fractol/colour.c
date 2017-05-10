@@ -98,10 +98,10 @@ void	ft_std_fract_data(t_all *all)
 {
 	all->p.end_c_b = 123;
 	all->p.end_c_g = 212;
-	all->p.end_c_r = 12;
-	all->p.start_c_b = 32;
+	all->p.end_c_r = 22;
+	all->p.start_c_b = 132;
 	all->p.start_c_g = 22;
-	all->p.start_c_r = 22;
+	all->p.start_c_r = 92;
 	if (all->fract.flag == 1 || all->fract.flag == 3)
 	{
 		all->fract.zoom = 1;

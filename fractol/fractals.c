@@ -19,7 +19,7 @@ void		move_xy(t_all *all, double param)
 	else if (param == 2 || param == -2)
 		all->fract.move_y = all->fract.move_y - param / 8;
 	else if (param == 4 || param == -4)
-		all->fract.zoom = all->fract.zoom + param / 25;
+		all->fract.zoom = all->fract.zoom + param / 20;
 	changed_fract(all);
 }
 
