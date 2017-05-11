@@ -11,14 +11,8 @@
     </configurations>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="a223763b-f3e7-4445-b3d7-7aacb8bd533a" name="Default" comment="10_05_2017 - 16:00">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/cmake-build-debug/fractol" afterPath="$PROJECT_DIR$/cmake-build-debug/fractol" />
+    <list default="true" id="a223763b-f3e7-4445-b3d7-7aacb8bd533a" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/colour.c" afterPath="$PROJECT_DIR$/colour.c" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/fractals.c" afterPath="$PROJECT_DIR$/fractals.c" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/fractals_2.c" afterPath="$PROJECT_DIR$/fractals_2.c" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/fractol.h" afterPath="$PROJECT_DIR$/fractol.h" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/main.c" afterPath="$PROJECT_DIR$/main.c" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -383,7 +377,7 @@
       <workItem from="1494404318311" duration="1364000" />
       <workItem from="1494417376735" duration="15925000" />
       <workItem from="1494499127672" duration="2663000" />
-      <workItem from="1494512135032" duration="442000" />
+      <workItem from="1494512135032" duration="469000" />
     </task>
     <task id="LOCAL-00001" summary="111">
       <created>1493914420374</created>
@@ -420,11 +414,18 @@
       <option name="project" value="LOCAL" />
       <updated>1494421135079</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="10_05_2017 - 16:00">
+      <created>1494513292449</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1494513292449</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="25544000" />
+    <option name="totallyTimeSpent" value="25571000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="2560" height="1440" extended-state="0" />
