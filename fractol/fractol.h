@@ -17,6 +17,7 @@
 # define IMG_WID 1200
 # define IMG_HIGH 900
 # define ITER 300
+# define THREAD 8
 
 # include <stdlib.h>
 # include <unistd.h>
@@ -27,6 +28,7 @@
 # include "libft/libft.h"
 # include <mlx.h>
 # include <stdio.h>
+# include <pthread.h>
 
 typedef struct		s_mlx
 {
@@ -81,12 +83,22 @@ typedef struct		s_all
 	t_fract			fract;
 }					t_all;
 
+typedef struct		s_data
+{
+	t_all			a;
+	int 			start;
+	int 			end;
+}					t_data;
+
 void				ft_julia_1(t_all *all);
-int 				ft_julia_2(t_all *all);
+//int 				ft_julia_2(t_all *all);
+int 				ft_julia_2(t_data *d);
 void				ft_julia3_1(t_all *all);
-int					ft_julia3_2(t_all *all);
+//int					ft_julia3_2(t_all *all);
+int					ft_julia3_2(t_data *d);
 void				ft_mandelbrot_1(t_all *all);
-int					ft_mandelbrot_2(t_all *all);
+//int					ft_mandelbrot_2(t_all *all);
+int					ft_mandelbrot_2(t_data *d);
 void				ft_window(int code, t_all *all);
 void				ft_find_fract(char *str, t_all *all);
 void				move_xy(t_all *all, double param);
@@ -94,7 +106,9 @@ void				ft_change_blue(t_all *all, double param);
 void				ft_change_green(t_all *all, double param);
 void 				ft_change_red(t_all *all, double param);
 void				ft_std_fract_data(t_all *all);
-void				draw_pixel(int x, int y, t_all *all);
-void				changed_fract(t_all *all);
+//void				draw_pixel(int x, int y, t_all *all);
+void				draw_pixel(int x, int y, t_data *d);
+void				*ft_fractal(void *data);
+void				ft_threads(t_all *all);
 
 #endif

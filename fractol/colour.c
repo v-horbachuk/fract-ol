@@ -12,16 +12,6 @@
 
 #include "fractol.h"
 
-void	changed_fract(t_all *all)
-{
-	if (all->fract.flag == 1)
-		ft_julia_1(all);
-	else if (all->fract.flag == 3)
-		ft_julia3_1(all);
-	else if (all->fract.flag == 2)
-		ft_mandelbrot_1(all);
-}
-
 void	ft_change_blue(t_all *all, double param)
 {
 	if (param == 1 || param == -1)
@@ -42,7 +32,7 @@ void	ft_change_blue(t_all *all, double param)
 			all->p.start_c_b += param;
 			all->p.end_c_b += param;
 		}
-		changed_fract(all);
+		ft_threads(all);
 	}
 }
 
@@ -66,7 +56,7 @@ void	ft_change_green(t_all *all, double param)
 			all->p.start_c_g += param;
 			all->p.end_c_g += param;
 		}
-		changed_fract(all);
+		ft_threads(all);
 	}
 }
 
@@ -90,7 +80,7 @@ void	ft_change_red(t_all *all, double param)
 			all->p.start_c_r += param;
 			all->p.end_c_r += param;
 		}
-		changed_fract(all);
+		ft_threads(all);
 	}
 }
 
@@ -110,7 +100,7 @@ void	ft_std_fract_data(t_all *all)
 		all->fract.cr = -0.7;
 		all->fract.ci = 0.27015;
 		if (all->p.flag == 1)
-			changed_fract(all);
+			ft_threads(all);
 	}
 	else if (all->fract.flag == 2)
 	{
@@ -118,6 +108,6 @@ void	ft_std_fract_data(t_all *all)
 		all->fract.move_x = -0.5;
 		all->fract.move_y = 0;
 		if (all->p.flag == 1)
-			changed_fract(all);
+			ft_threads(all);
 	}
 }

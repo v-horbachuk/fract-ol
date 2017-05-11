@@ -60,32 +60,68 @@ int 	mouse_hook(int button, int x, int y, t_all *all)
 	printf("%d\n%d\n", x , y);
 	if (button == 4)
 	{
-		all->fract.zoom = all->fract.zoom + .02;
+		all->fract.zoom = all->fract.zoom + .1;
 	}
 	else if (button == 5)
 	{
-		all->fract.zoom = all->fract.zoom - .02;
+		all->fract.zoom = all->fract.zoom - .1;
 	}
-//	else if (button == 1)
-//	{
-//		if (all->fract.flag == 1 || all->fract.flag == 3)
-//		{
-//			all->fract.cr = all->fract.cr + x / 100;
-//			all->fract.ci = all->fract.ci + y / 100;
-//		}
+	else if (button == 1)
+	{
+		if (all->fract.flag == 1 || all->fract.flag == 3)
+		{
+			all->fract.x = x;
+			all->fract.y = y;
+		}
 //		else
 //		{
 //			all->fract.pr += 1;
 //			all->fract.pi += 1;
 //		}
-//	}
-	changed_fract(all);
+	}
+	ft_threads(all);
 	return (0);
 }
 
-void	ft_treads(t_all *all)
+t_data	*data_create(t_all *all, t_data *d, int i)
 {
+	int 	lines;
 
+	lines = IMG_HIGH / THREAD + 1;
+	d = (t_data *)malloc(sizeof(t_data));
+	d->start = i * lines;
+	d->end = (i + 1) * lines;
+	if (d->end > IMG_HIGH)
+		d->end = IMG_HIGH;
+	d->a = *all;
+	return (d);
+}
+
+void	ft_threads(t_all *all)
+{
+	int 			i;
+	t_data			*data;
+	pthread_t		threads[THREAD];
+	pthread_attr_t	attr;
+
+	i = -1;
+	data = NULL;
+	pthread_attr_init(&attr);
+	all->mlx.img = mlx_new_image(all->mlx.mlx, IMG_WID, IMG_HIGH);
+	all->mlx.gda = mlx_get_data_addr(all->mlx.img, &all->mlx.bpp,
+									 &all->mlx.sl, &all->mlx.endian);
+	pthread_attr_setdetachstate(&attr, PTHREAD_CREATE_JOINABLE);
+
+	while (++i < THREAD)
+	{
+		data = data_create(all, data, i);
+		pthread_create(&threads[i], &attr, ft_fractal, (void *)data);
+	}
+	pthread_attr_destroy(&attr);
+	i = 0;
+	while (i < THREAD)
+		pthread_join(threads[i++], NULL);
+	mlx_put_image_to_window(all->mlx.mlx, all->mlx.win, all->mlx.img, 0, 0);
 }
 
 void	ft_window(int code, t_all *all)
@@ -96,19 +132,19 @@ void	ft_window(int code, t_all *all)
 	{
 		all->mlx.win = mlx_new_window(all->mlx.mlx,
 							WIN_WID, WIN_HIGH, "Julia");
-		ft_julia_1(all);
+		ft_threads(all);
 	}
 	else if (code == 2)
 	{
 		all->mlx.win = mlx_new_window(all->mlx.mlx,
 						WIN_WID, WIN_HIGH, "Mandelbrot");
-		ft_mandelbrot_1(all);
+		ft_threads(all);
 	}
 	else if (code == 3)
 	{
 		all->mlx.win = mlx_new_window(all->mlx.mlx,
 							WIN_WID, WIN_HIGH, "Julia^3");
-		ft_julia3_1(all);
+		ft_threads(all);
 	}
 	mlx_hook(all->mlx.win, 2, 3, key_hook, all);
 	mlx_mouse_hook(all->mlx.win, mouse_hook, all);
@@ -169,7 +205,7 @@ int		main(int ac, char **av)
 	t_all	*all;
 
 	i = 1;
-	all = (t_all*)malloc(sizeof(t_all));
+	all = (t_all *)malloc(sizeof(t_all));
 	all->p.flag = 0;
 	all->fract.flag = 0;
 	if (ac < 2 || ac > 4)
@@ -179,10 +215,11 @@ int		main(int ac, char **av)
 		while (i < ac)
 		{
 			pid = fork();
-			if (pid == 0)
+			if (pid != 0)
 			{
 				all->fract.string = av[i];
 				ft_find_fract(all->fract.string, all);
+				break ;
 			}
 			i++;
 		}
