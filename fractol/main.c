@@ -12,118 +12,6 @@
 
 #include "fractol.h"
 
-int		key_colour(int keycode, t_all *all)
-{
-	if (keycode == 85)
-		ft_change_blue(all, 1);
-	else if (keycode == 83)
-		ft_change_blue(all, -1);
-	else if (keycode == 88)
-		ft_change_green(all, 2);
-	else if (keycode == 86)
-		ft_change_green(all, -2);
-	else if (keycode == 92)
-		ft_change_red(all, 5);
-	else if (keycode == 89)
-		ft_change_red(all, -5);
-	return (0);
-}
-
-int		key_hook(int keycode, t_all *all)
-{
-	if (keycode == 53)
-		exit(0);
-	else if (keycode == 49)
-	{
-		all->p.flag = 1;
-		ft_std_fract_data(all);
-	}
-	else if (keycode == 124)
-		move_xy(all, 1);
-	else if (keycode == 123)
-		move_xy(all, -1);
-	else if (keycode == 126)
-		move_xy(all, -2);
-	else if (keycode == 125)
-		move_xy(all, 2);
-	else if (keycode == 24 || keycode == 69)
-		move_xy(all, 4);
-	else if (keycode == 27 || keycode == 78)
-		move_xy(all, -4);
-	else
-		key_colour(keycode, all);
-	return (0);
-}
-
-int 	mouse_hook(int button, int x, int y, t_all *all)
-{
-	printf("%d\n%d\n", x , y);
-	if (button == 4)
-	{
-		all->fract.zoom = all->fract.zoom + .1;
-	}
-	else if (button == 5)
-	{
-		all->fract.zoom = all->fract.zoom - .1;
-	}
-	else if (button == 1)
-	{
-		if (all->fract.flag == 1 || all->fract.flag == 3)
-		{
-			all->fract.x = x;
-			all->fract.y = y;
-		}
-//		else
-//		{
-//			all->fract.pr += 1;
-//			all->fract.pi += 1;
-//		}
-	}
-	ft_threads(all);
-	return (0);
-}
-
-t_data	*data_create(t_all *all, t_data *d, int i)
-{
-	int 	lines;
-
-	lines = IMG_HIGH / THREAD + 1;
-	d = (t_data *)malloc(sizeof(t_data));
-	d->start = i * lines;
-	d->end = (i + 1) * lines;
-	if (d->end > IMG_HIGH)
-		d->end = IMG_HIGH;
-	d->a = *all;
-	return (d);
-}
-
-void	ft_threads(t_all *all)
-{
-	int 			i;
-	t_data			*data;
-	pthread_t		threads[THREAD];
-	pthread_attr_t	attr;
-
-	i = -1;
-	data = NULL;
-	pthread_attr_init(&attr);
-	all->mlx.img = mlx_new_image(all->mlx.mlx, IMG_WID, IMG_HIGH);
-	all->mlx.gda = mlx_get_data_addr(all->mlx.img, &all->mlx.bpp,
-									 &all->mlx.sl, &all->mlx.endian);
-	pthread_attr_setdetachstate(&attr, PTHREAD_CREATE_JOINABLE);
-
-	while (++i < THREAD)
-	{
-		data = data_create(all, data, i);
-		pthread_create(&threads[i], &attr, ft_fractal, (void *)data);
-	}
-	pthread_attr_destroy(&attr);
-	i = 0;
-	while (i < THREAD)
-		pthread_join(threads[i++], NULL);
-	mlx_put_image_to_window(all->mlx.mlx, all->mlx.win, all->mlx.img, 0, 0);
-}
-
 void	ft_window(int code, t_all *all)
 {
 	all->mlx.mlx = mlx_init();
@@ -148,7 +36,6 @@ void	ft_window(int code, t_all *all)
 	}
 	mlx_hook(all->mlx.win, 2, 3, key_hook, all);
 	mlx_mouse_hook(all->mlx.win, mouse_hook, all);
-	//mlx_hook(all->mlx.win, 6, 2, mouse_hook, all);
 	mlx_loop(all->mlx.mlx);
 }
 
@@ -167,7 +54,7 @@ void	say_error(int code)
 		ft_putstr("       If you want the Julia set displayed - "
 							"type 'J' as argument.\n");
 		ft_putstr("       If you want the Julia^3 set displayed - "
-							"type 'J1' as argument.\n");
+							"type 'J3' as argument.\n");
 		ft_putstr("       If you want all of these sets displayed - "
 							"use all mentioned arguments. Thank's, Captain!\n");
 	}
@@ -189,7 +76,7 @@ void	ft_find_fract(char *str, t_all *all)
 		all->fract.flag = 2;
 		ft_window(2, all);
 	}
-	else if (ft_strcmp(str, "J1") == 0)
+	else if (ft_strcmp(str, "J3") == 0)
 	{
 		all->fract.flag = 3;
 		ft_window(3, all);

@@ -105,33 +105,9 @@ CMakeFiles/fractol.dir/fractals.c.o.provides: CMakeFiles/fractol.dir/fractals.c.
 CMakeFiles/fractol.dir/fractals.c.o.provides.build: CMakeFiles/fractol.dir/fractals.c.o
 
 
-CMakeFiles/fractol.dir/fractals_2.c.o: CMakeFiles/fractol.dir/flags.make
-CMakeFiles/fractol.dir/fractals_2.c.o: ../fractals_2.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/nfs/2016/v/vhorbach/Documents/Projects/fract-ol/fractol/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building C object CMakeFiles/fractol.dir/fractals_2.c.o"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/fractol.dir/fractals_2.c.o   -c /nfs/2016/v/vhorbach/Documents/Projects/fract-ol/fractol/fractals_2.c
-
-CMakeFiles/fractol.dir/fractals_2.c.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/fractol.dir/fractals_2.c.i"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /nfs/2016/v/vhorbach/Documents/Projects/fract-ol/fractol/fractals_2.c > CMakeFiles/fractol.dir/fractals_2.c.i
-
-CMakeFiles/fractol.dir/fractals_2.c.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/fractol.dir/fractals_2.c.s"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /nfs/2016/v/vhorbach/Documents/Projects/fract-ol/fractol/fractals_2.c -o CMakeFiles/fractol.dir/fractals_2.c.s
-
-CMakeFiles/fractol.dir/fractals_2.c.o.requires:
-
-.PHONY : CMakeFiles/fractol.dir/fractals_2.c.o.requires
-
-CMakeFiles/fractol.dir/fractals_2.c.o.provides: CMakeFiles/fractol.dir/fractals_2.c.o.requires
-	$(MAKE) -f CMakeFiles/fractol.dir/build.make CMakeFiles/fractol.dir/fractals_2.c.o.provides.build
-.PHONY : CMakeFiles/fractol.dir/fractals_2.c.o.provides
-
-CMakeFiles/fractol.dir/fractals_2.c.o.provides.build: CMakeFiles/fractol.dir/fractals_2.c.o
-
-
 CMakeFiles/fractol.dir/main.c.o: CMakeFiles/fractol.dir/flags.make
 CMakeFiles/fractol.dir/main.c.o: ../main.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/nfs/2016/v/vhorbach/Documents/Projects/fract-ol/fractol/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building C object CMakeFiles/fractol.dir/main.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/nfs/2016/v/vhorbach/Documents/Projects/fract-ol/fractol/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building C object CMakeFiles/fractol.dir/main.c.o"
 	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/fractol.dir/main.c.o   -c /nfs/2016/v/vhorbach/Documents/Projects/fract-ol/fractol/main.c
 
 CMakeFiles/fractol.dir/main.c.i: cmake_force
@@ -153,23 +129,99 @@ CMakeFiles/fractol.dir/main.c.o.provides: CMakeFiles/fractol.dir/main.c.o.requir
 CMakeFiles/fractol.dir/main.c.o.provides.build: CMakeFiles/fractol.dir/main.c.o
 
 
+CMakeFiles/fractol.dir/draw__other.c.o: CMakeFiles/fractol.dir/flags.make
+CMakeFiles/fractol.dir/draw__other.c.o: ../draw__other.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/nfs/2016/v/vhorbach/Documents/Projects/fract-ol/fractol/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building C object CMakeFiles/fractol.dir/draw__other.c.o"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/fractol.dir/draw__other.c.o   -c /nfs/2016/v/vhorbach/Documents/Projects/fract-ol/fractol/draw__other.c
+
+CMakeFiles/fractol.dir/draw__other.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/fractol.dir/draw__other.c.i"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /nfs/2016/v/vhorbach/Documents/Projects/fract-ol/fractol/draw__other.c > CMakeFiles/fractol.dir/draw__other.c.i
+
+CMakeFiles/fractol.dir/draw__other.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/fractol.dir/draw__other.c.s"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /nfs/2016/v/vhorbach/Documents/Projects/fract-ol/fractol/draw__other.c -o CMakeFiles/fractol.dir/draw__other.c.s
+
+CMakeFiles/fractol.dir/draw__other.c.o.requires:
+
+.PHONY : CMakeFiles/fractol.dir/draw__other.c.o.requires
+
+CMakeFiles/fractol.dir/draw__other.c.o.provides: CMakeFiles/fractol.dir/draw__other.c.o.requires
+	$(MAKE) -f CMakeFiles/fractol.dir/build.make CMakeFiles/fractol.dir/draw__other.c.o.provides.build
+.PHONY : CMakeFiles/fractol.dir/draw__other.c.o.provides
+
+CMakeFiles/fractol.dir/draw__other.c.o.provides.build: CMakeFiles/fractol.dir/draw__other.c.o
+
+
+CMakeFiles/fractol.dir/threads.c.o: CMakeFiles/fractol.dir/flags.make
+CMakeFiles/fractol.dir/threads.c.o: ../threads.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/nfs/2016/v/vhorbach/Documents/Projects/fract-ol/fractol/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building C object CMakeFiles/fractol.dir/threads.c.o"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/fractol.dir/threads.c.o   -c /nfs/2016/v/vhorbach/Documents/Projects/fract-ol/fractol/threads.c
+
+CMakeFiles/fractol.dir/threads.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/fractol.dir/threads.c.i"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /nfs/2016/v/vhorbach/Documents/Projects/fract-ol/fractol/threads.c > CMakeFiles/fractol.dir/threads.c.i
+
+CMakeFiles/fractol.dir/threads.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/fractol.dir/threads.c.s"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /nfs/2016/v/vhorbach/Documents/Projects/fract-ol/fractol/threads.c -o CMakeFiles/fractol.dir/threads.c.s
+
+CMakeFiles/fractol.dir/threads.c.o.requires:
+
+.PHONY : CMakeFiles/fractol.dir/threads.c.o.requires
+
+CMakeFiles/fractol.dir/threads.c.o.provides: CMakeFiles/fractol.dir/threads.c.o.requires
+	$(MAKE) -f CMakeFiles/fractol.dir/build.make CMakeFiles/fractol.dir/threads.c.o.provides.build
+.PHONY : CMakeFiles/fractol.dir/threads.c.o.provides
+
+CMakeFiles/fractol.dir/threads.c.o.provides.build: CMakeFiles/fractol.dir/threads.c.o
+
+
+CMakeFiles/fractol.dir/key_hooks.c.o: CMakeFiles/fractol.dir/flags.make
+CMakeFiles/fractol.dir/key_hooks.c.o: ../key_hooks.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/nfs/2016/v/vhorbach/Documents/Projects/fract-ol/fractol/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Building C object CMakeFiles/fractol.dir/key_hooks.c.o"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/fractol.dir/key_hooks.c.o   -c /nfs/2016/v/vhorbach/Documents/Projects/fract-ol/fractol/key_hooks.c
+
+CMakeFiles/fractol.dir/key_hooks.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/fractol.dir/key_hooks.c.i"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /nfs/2016/v/vhorbach/Documents/Projects/fract-ol/fractol/key_hooks.c > CMakeFiles/fractol.dir/key_hooks.c.i
+
+CMakeFiles/fractol.dir/key_hooks.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/fractol.dir/key_hooks.c.s"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /nfs/2016/v/vhorbach/Documents/Projects/fract-ol/fractol/key_hooks.c -o CMakeFiles/fractol.dir/key_hooks.c.s
+
+CMakeFiles/fractol.dir/key_hooks.c.o.requires:
+
+.PHONY : CMakeFiles/fractol.dir/key_hooks.c.o.requires
+
+CMakeFiles/fractol.dir/key_hooks.c.o.provides: CMakeFiles/fractol.dir/key_hooks.c.o.requires
+	$(MAKE) -f CMakeFiles/fractol.dir/build.make CMakeFiles/fractol.dir/key_hooks.c.o.provides.build
+.PHONY : CMakeFiles/fractol.dir/key_hooks.c.o.provides
+
+CMakeFiles/fractol.dir/key_hooks.c.o.provides.build: CMakeFiles/fractol.dir/key_hooks.c.o
+
+
 # Object files for target fractol
 fractol_OBJECTS = \
 "CMakeFiles/fractol.dir/colour.c.o" \
 "CMakeFiles/fractol.dir/fractals.c.o" \
-"CMakeFiles/fractol.dir/fractals_2.c.o" \
-"CMakeFiles/fractol.dir/main.c.o"
+"CMakeFiles/fractol.dir/main.c.o" \
+"CMakeFiles/fractol.dir/draw__other.c.o" \
+"CMakeFiles/fractol.dir/threads.c.o" \
+"CMakeFiles/fractol.dir/key_hooks.c.o"
 
 # External object files for target fractol
 fractol_EXTERNAL_OBJECTS =
 
 fractol: CMakeFiles/fractol.dir/colour.c.o
 fractol: CMakeFiles/fractol.dir/fractals.c.o
-fractol: CMakeFiles/fractol.dir/fractals_2.c.o
 fractol: CMakeFiles/fractol.dir/main.c.o
+fractol: CMakeFiles/fractol.dir/draw__other.c.o
+fractol: CMakeFiles/fractol.dir/threads.c.o
+fractol: CMakeFiles/fractol.dir/key_hooks.c.o
 fractol: CMakeFiles/fractol.dir/build.make
 fractol: CMakeFiles/fractol.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/nfs/2016/v/vhorbach/Documents/Projects/fract-ol/fractol/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Linking C executable fractol"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/nfs/2016/v/vhorbach/Documents/Projects/fract-ol/fractol/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Linking C executable fractol"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/fractol.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.
@@ -179,8 +231,10 @@ CMakeFiles/fractol.dir/build: fractol
 
 CMakeFiles/fractol.dir/requires: CMakeFiles/fractol.dir/colour.c.o.requires
 CMakeFiles/fractol.dir/requires: CMakeFiles/fractol.dir/fractals.c.o.requires
-CMakeFiles/fractol.dir/requires: CMakeFiles/fractol.dir/fractals_2.c.o.requires
 CMakeFiles/fractol.dir/requires: CMakeFiles/fractol.dir/main.c.o.requires
+CMakeFiles/fractol.dir/requires: CMakeFiles/fractol.dir/draw__other.c.o.requires
+CMakeFiles/fractol.dir/requires: CMakeFiles/fractol.dir/threads.c.o.requires
+CMakeFiles/fractol.dir/requires: CMakeFiles/fractol.dir/key_hooks.c.o.requires
 
 .PHONY : CMakeFiles/fractol.dir/requires
 

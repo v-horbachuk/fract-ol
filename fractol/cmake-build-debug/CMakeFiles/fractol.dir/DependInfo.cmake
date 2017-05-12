@@ -5,9 +5,11 @@ set(CMAKE_DEPENDS_LANGUAGES
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_C
   "/nfs/2016/v/vhorbach/Documents/Projects/fract-ol/fractol/colour.c" "/nfs/2016/v/vhorbach/Documents/Projects/fract-ol/fractol/cmake-build-debug/CMakeFiles/fractol.dir/colour.c.o"
+  "/nfs/2016/v/vhorbach/Documents/Projects/fract-ol/fractol/draw__other.c" "/nfs/2016/v/vhorbach/Documents/Projects/fract-ol/fractol/cmake-build-debug/CMakeFiles/fractol.dir/draw__other.c.o"
   "/nfs/2016/v/vhorbach/Documents/Projects/fract-ol/fractol/fractals.c" "/nfs/2016/v/vhorbach/Documents/Projects/fract-ol/fractol/cmake-build-debug/CMakeFiles/fractol.dir/fractals.c.o"
-  "/nfs/2016/v/vhorbach/Documents/Projects/fract-ol/fractol/fractals_2.c" "/nfs/2016/v/vhorbach/Documents/Projects/fract-ol/fractol/cmake-build-debug/CMakeFiles/fractol.dir/fractals_2.c.o"
+  "/nfs/2016/v/vhorbach/Documents/Projects/fract-ol/fractol/key_hooks.c" "/nfs/2016/v/vhorbach/Documents/Projects/fract-ol/fractol/cmake-build-debug/CMakeFiles/fractol.dir/key_hooks.c.o"
   "/nfs/2016/v/vhorbach/Documents/Projects/fract-ol/fractol/main.c" "/nfs/2016/v/vhorbach/Documents/Projects/fract-ol/fractol/cmake-build-debug/CMakeFiles/fractol.dir/main.c.o"
+  "/nfs/2016/v/vhorbach/Documents/Projects/fract-ol/fractol/threads.c" "/nfs/2016/v/vhorbach/Documents/Projects/fract-ol/fractol/cmake-build-debug/CMakeFiles/fractol.dir/threads.c.o"
   )
 set(CMAKE_C_COMPILER_ID "AppleClang")
 

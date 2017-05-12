@@ -5,15 +5,23 @@ CMakeFiles/fractol.dir/colour.c.o: ../colour.c
 CMakeFiles/fractol.dir/colour.c.o: ../fractol.h
 CMakeFiles/fractol.dir/colour.c.o: ../libft/libft.h
 
+CMakeFiles/fractol.dir/draw__other.c.o: ../draw__other.c
+CMakeFiles/fractol.dir/draw__other.c.o: ../fractol.h
+CMakeFiles/fractol.dir/draw__other.c.o: ../libft/libft.h
+
 CMakeFiles/fractol.dir/fractals.c.o: ../fractals.c
 CMakeFiles/fractol.dir/fractals.c.o: ../fractol.h
 CMakeFiles/fractol.dir/fractals.c.o: ../libft/libft.h
 
-CMakeFiles/fractol.dir/fractals_2.c.o: ../fractals_2.c
-CMakeFiles/fractol.dir/fractals_2.c.o: ../fractol.h
-CMakeFiles/fractol.dir/fractals_2.c.o: ../libft/libft.h
+CMakeFiles/fractol.dir/key_hooks.c.o: ../fractol.h
+CMakeFiles/fractol.dir/key_hooks.c.o: ../key_hooks.c
+CMakeFiles/fractol.dir/key_hooks.c.o: ../libft/libft.h
 
 CMakeFiles/fractol.dir/main.c.o: ../fractol.h
 CMakeFiles/fractol.dir/main.c.o: ../libft/libft.h
 CMakeFiles/fractol.dir/main.c.o: ../main.c
+
+CMakeFiles/fractol.dir/threads.c.o: ../fractol.h
+CMakeFiles/fractol.dir/threads.c.o: ../libft/libft.h
+CMakeFiles/fractol.dir/threads.c.o: ../threads.c
 

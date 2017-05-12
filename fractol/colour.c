@@ -84,19 +84,30 @@ void	ft_change_red(t_all *all, double param)
 	}
 }
 
+void	ft_std_data_2(t_all *all)
+{
+	all->fract.zoom = 0.85;
+	all->fract.move_x = 0;
+	all->fract.move_y = 0.135;
+	all->fract.cr = 0.41;
+	all->fract.ci = 0.623454;
+	if (all->p.flag == 1)
+		ft_threads(all);
+}
+
 void	ft_std_fract_data(t_all *all)
 {
-	all->p.end_c_b = 123;
+	all->p.end_c_b = 20;
 	all->p.end_c_g = 212;
-	all->p.end_c_r = 22;
+	all->p.end_c_r = 0;
 	all->p.start_c_b = 132;
 	all->p.start_c_g = 22;
-	all->p.start_c_r = 92;
-	if (all->fract.flag == 1 || all->fract.flag == 3)
+	all->p.start_c_r = 0;
+	all->fract.move_y = 0;
+	if (all->fract.flag == 1)
 	{
 		all->fract.zoom = 1;
 		all->fract.move_x = 0;
-		all->fract.move_y = 0;
 		all->fract.cr = -0.7;
 		all->fract.ci = 0.27015;
 		if (all->p.flag == 1)
@@ -106,8 +117,9 @@ void	ft_std_fract_data(t_all *all)
 	{
 		all->fract.zoom = 1;
 		all->fract.move_x = -0.5;
-		all->fract.move_y = 0;
 		if (all->p.flag == 1)
 			ft_threads(all);
 	}
+	else
+		ft_std_data_2(all);
 }

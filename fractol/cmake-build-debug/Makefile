@@ -150,6 +150,33 @@ colour.c.s:
 	$(MAKE) -f CMakeFiles/fractol.dir/build.make CMakeFiles/fractol.dir/colour.c.s
 .PHONY : colour.c.s
 
+draw__other.o: draw__other.c.o
+
+.PHONY : draw__other.o
+
+# target to build an object file
+draw__other.c.o:
+	$(MAKE) -f CMakeFiles/fractol.dir/build.make CMakeFiles/fractol.dir/draw__other.c.o
+.PHONY : draw__other.c.o
+
+draw__other.i: draw__other.c.i
+
+.PHONY : draw__other.i
+
+# target to preprocess a source file
+draw__other.c.i:
+	$(MAKE) -f CMakeFiles/fractol.dir/build.make CMakeFiles/fractol.dir/draw__other.c.i
+.PHONY : draw__other.c.i
+
+draw__other.s: draw__other.c.s
+
+.PHONY : draw__other.s
+
+# target to generate assembly for a file
+draw__other.c.s:
+	$(MAKE) -f CMakeFiles/fractol.dir/build.make CMakeFiles/fractol.dir/draw__other.c.s
+.PHONY : draw__other.c.s
+
 fractals.o: fractals.c.o
 
 .PHONY : fractals.o
@@ -177,32 +204,32 @@ fractals.c.s:
 	$(MAKE) -f CMakeFiles/fractol.dir/build.make CMakeFiles/fractol.dir/fractals.c.s
 .PHONY : fractals.c.s
 
-fractals_2.o: fractals_2.c.o
+key_hooks.o: key_hooks.c.o
 
-.PHONY : fractals_2.o
+.PHONY : key_hooks.o
 
 # target to build an object file
-fractals_2.c.o:
-	$(MAKE) -f CMakeFiles/fractol.dir/build.make CMakeFiles/fractol.dir/fractals_2.c.o
-.PHONY : fractals_2.c.o
+key_hooks.c.o:
+	$(MAKE) -f CMakeFiles/fractol.dir/build.make CMakeFiles/fractol.dir/key_hooks.c.o
+.PHONY : key_hooks.c.o
 
-fractals_2.i: fractals_2.c.i
+key_hooks.i: key_hooks.c.i
 
-.PHONY : fractals_2.i
+.PHONY : key_hooks.i
 
 # target to preprocess a source file
-fractals_2.c.i:
-	$(MAKE) -f CMakeFiles/fractol.dir/build.make CMakeFiles/fractol.dir/fractals_2.c.i
-.PHONY : fractals_2.c.i
+key_hooks.c.i:
+	$(MAKE) -f CMakeFiles/fractol.dir/build.make CMakeFiles/fractol.dir/key_hooks.c.i
+.PHONY : key_hooks.c.i
 
-fractals_2.s: fractals_2.c.s
+key_hooks.s: key_hooks.c.s
 
-.PHONY : fractals_2.s
+.PHONY : key_hooks.s
 
 # target to generate assembly for a file
-fractals_2.c.s:
-	$(MAKE) -f CMakeFiles/fractol.dir/build.make CMakeFiles/fractol.dir/fractals_2.c.s
-.PHONY : fractals_2.c.s
+key_hooks.c.s:
+	$(MAKE) -f CMakeFiles/fractol.dir/build.make CMakeFiles/fractol.dir/key_hooks.c.s
+.PHONY : key_hooks.c.s
 
 main.o: main.c.o
 
@@ -231,6 +258,33 @@ main.c.s:
 	$(MAKE) -f CMakeFiles/fractol.dir/build.make CMakeFiles/fractol.dir/main.c.s
 .PHONY : main.c.s
 
+threads.o: threads.c.o
+
+.PHONY : threads.o
+
+# target to build an object file
+threads.c.o:
+	$(MAKE) -f CMakeFiles/fractol.dir/build.make CMakeFiles/fractol.dir/threads.c.o
+.PHONY : threads.c.o
+
+threads.i: threads.c.i
+
+.PHONY : threads.i
+
+# target to preprocess a source file
+threads.c.i:
+	$(MAKE) -f CMakeFiles/fractol.dir/build.make CMakeFiles/fractol.dir/threads.c.i
+.PHONY : threads.c.i
+
+threads.s: threads.c.s
+
+.PHONY : threads.s
+
+# target to generate assembly for a file
+threads.c.s:
+	$(MAKE) -f CMakeFiles/fractol.dir/build.make CMakeFiles/fractol.dir/threads.c.s
+.PHONY : threads.c.s
+
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
@@ -243,15 +297,21 @@ help:
 	@echo "... colour.o"
 	@echo "... colour.i"
 	@echo "... colour.s"
+	@echo "... draw__other.o"
+	@echo "... draw__other.i"
+	@echo "... draw__other.s"
 	@echo "... fractals.o"
 	@echo "... fractals.i"
 	@echo "... fractals.s"
-	@echo "... fractals_2.o"
-	@echo "... fractals_2.i"
-	@echo "... fractals_2.s"
+	@echo "... key_hooks.o"
+	@echo "... key_hooks.i"
+	@echo "... key_hooks.s"
 	@echo "... main.o"
 	@echo "... main.i"
 	@echo "... main.s"
+	@echo "... threads.o"
+	@echo "... threads.i"
+	@echo "... threads.s"
 .PHONY : help
 
 

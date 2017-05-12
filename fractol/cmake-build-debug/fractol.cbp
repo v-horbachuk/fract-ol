@@ -87,13 +87,19 @@
 		<Unit filename="/nfs/2016/v/vhorbach/Documents/Projects/fract-ol/fractol/colour.c">
 			<Option target="fractol"/>
 		</Unit>
+		<Unit filename="/nfs/2016/v/vhorbach/Documents/Projects/fract-ol/fractol/draw__other.c">
+			<Option target="fractol"/>
+		</Unit>
 		<Unit filename="/nfs/2016/v/vhorbach/Documents/Projects/fract-ol/fractol/fractals.c">
 			<Option target="fractol"/>
 		</Unit>
-		<Unit filename="/nfs/2016/v/vhorbach/Documents/Projects/fract-ol/fractol/fractals_2.c">
+		<Unit filename="/nfs/2016/v/vhorbach/Documents/Projects/fract-ol/fractol/key_hooks.c">
 			<Option target="fractol"/>
 		</Unit>
 		<Unit filename="/nfs/2016/v/vhorbach/Documents/Projects/fract-ol/fractol/main.c">
+			<Option target="fractol"/>
+		</Unit>
+		<Unit filename="/nfs/2016/v/vhorbach/Documents/Projects/fract-ol/fractol/threads.c">
 			<Option target="fractol"/>
 		</Unit>
 		<Unit filename="/nfs/2016/v/vhorbach/Documents/Projects/fract-ol/fractol/CMakeLists.txt">
