@@ -73,8 +73,8 @@ void		ft_one_more_time(t_data *d)
 	}
 	else if (d->a.fract.flag == 2)
 	{
-		d->a.fract.nr = 0;
-		d->a.fract.ni = 0;
+		d->a.fract.nr = d->a.fract.mr;
+		d->a.fract.ni = d->a.fract.mi;
 		d->a.fract.pr = 1.5 * (d->a.fract.x - IMG_WID / 2) / (0.5 *
 				d->a.fract.zoom * IMG_WID) + d->a.fract.move_x;
 		d->a.fract.pi = (d->a.fract.y - IMG_HIGH / 2) / (0.5 *

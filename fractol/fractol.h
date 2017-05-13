@@ -75,6 +75,8 @@ typedef struct		s_fract
 	char 			*string;
 	int 			flag;
 	int 			mouse;
+	double 			mr;
+	double 			mi;
 }					t_fract;
 
 typedef struct		s_all
@@ -106,5 +108,8 @@ void				*ft_fractal(void *data);
 void				ft_threads(t_all *all);
 int					mouse_hook(int button, int x, int y, t_all *all);
 int					key_hook(int keycode, t_all *all);
+void				ft_std_data_2(t_all *all);
+void				ft_std_data_1(t_all *all);
+void				m_hook(t_all *all);
 
 #endif

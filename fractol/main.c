@@ -66,6 +66,7 @@ void	say_error(int code)
 
 void	ft_find_fract(char *str, t_all *all)
 {
+	all->fract.mouse = 1;
 	if (ft_strcmp(str, "J") == 0)
 	{
 		all->fract.flag = 1;

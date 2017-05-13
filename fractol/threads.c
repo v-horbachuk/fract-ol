@@ -6,7 +6,7 @@
 /*   By: vhorbach <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/05/12 18:58:59 by vhorbach          #+#    #+#             */
-/*   Updated: 2017/05/12 18:59:02 by vhorbach         ###   ########.fr       */
+/*   Updated: 2017/05/12 19:15:44 by vhorbach         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -38,7 +38,7 @@ void	ft_threads(t_all *all)
 	pthread_attr_init(&attr);
 	all->mlx.img = mlx_new_image(all->mlx.mlx, IMG_WID, IMG_HIGH);
 	all->mlx.gda = mlx_get_data_addr(all->mlx.img, &all->mlx.bpp,
-									 &all->mlx.sl, &all->mlx.endian);
+									&all->mlx.sl, &all->mlx.endian);
 	pthread_attr_setdetachstate(&attr, PTHREAD_CREATE_JOINABLE);
 	while (++i < THREAD)
 	{

@@ -55,22 +55,28 @@ int		key_hook(int keycode, t_all *all)
 	return (0);
 }
 
-int		mouse_hook_vary(int button, int x, int y, t_all *all)
+int		mouse_hook_vary(int x, int y, t_all *all)
 {
-	if (button == 8)
-		return (0);
-	if (all->fract.flag == 1 || all->fract.flag == 3)
+	if (x > 0 && x < IMG_WID && y > 0 && y < IMG_HIGH && all->fract.mouse == 0)
 	{
-		all->fract.cr = 0.41;
-		all->fract.ci = 0.623454;
-		all->fract.cr += ((double)x - IMG_WID / 2) / (double)IMG_WID;
-		all->fract.ci += ((double)y - IMG_HIGH / 2) / (double)IMG_HIGH;
+		if (all->fract.flag == 1 || all->fract.flag == 3)
+		{
+			all->fract.flag == 1 ? all->fract.cr = -0.7 : 0.41;
+			all->fract.flag == 1 ? all->fract.ci = 0.27015 : 0.623454;
+			all->fract.flag == 3 ? all->fract.cr = 0.41 : -0.7;
+			all->fract.flag == 3 ? all->fract.ci = 0.623454 : 0.27015;
+			all->fract.cr += ((double)x - IMG_WID / 2.) / (double)IMG_WID;
+			all->fract.ci += ((double)y - IMG_HIGH / 2.) / (double)IMG_HIGH;
+		}
+		else if (all->fract.flag == 2)
+		{
+			all->fract.mr = 0;
+			all->fract.mi = 0;
+			all->fract.mr += ((double)x - IMG_WID / 2) / (double)IMG_WID;
+			all->fract.mi += ((double)y - IMG_HIGH / 2) / (double)IMG_HIGH;
+		}
 	}
-	else if (all->fract.flag == 2)
-	{
-		all->fract.pr += (x - IMG_WID / 2) / IMG_WID;
-		all->fract.pi += (y - IMG_HIGH / 2) / IMG_HIGH;
-	}
+	ft_threads(all);
 	return (0);
 }
 
@@ -79,22 +85,25 @@ int		mouse_hook(int button, int x, int y, t_all *all)
 	if (button == 4)
 	{
 		all->fract.zoom = all->fract.zoom + .1;
+		all->fract.move_x += (x - IMG_WID / 2) /
+				(IMG_WID * all->fract.zoom * 3);
+		all->fract.move_y += (y - IMG_HIGH / 2) /
+				(IMG_HIGH * all->fract.zoom * 3);
 	}
 	else if (button == 5)
 	{
 		all->fract.zoom = all->fract.zoom - .1;
+		all->fract.move_x += (x - IMG_WID / 2) /
+				(IMG_WID * all->fract.zoom * 3);
+		all->fract.move_y += (y - IMG_HIGH / 2) /
+				(IMG_HIGH * all->fract.zoom * 3);
 	}
 	if (all->fract.zoom < 0.09)
 		all->fract.zoom = 0.09;
-	all->fract.move_x += (x - IMG_WID / 2) / (IMG_WID * all->fract.zoom * 3);
-	all->fract.move_y += (y - IMG_HIGH / 2) / (IMG_HIGH * all->fract.zoom * 3);
 	if (button == 1)
 	{
 		mlx_hook(all->mlx.win, 6, (1L << 6), mouse_hook_vary, all);
-		if (all->fract.mouse == 1)
-			all->fract.mouse = 0;
-		else
-			all->fract.mouse = 1;
+		m_hook(all);
 	}
 	ft_threads(all);
 	return (0);
