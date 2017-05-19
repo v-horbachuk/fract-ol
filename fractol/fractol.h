@@ -6,7 +6,7 @@
 /*   By: vhorbach <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/04/19 11:28:06 by vhorbach          #+#    #+#             */
-/*   Updated: 2017/04/19 11:28:08 by vhorbach         ###   ########.fr       */
+/*   Updated: 2017/05/13 21:26:14 by vhorbach         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -53,12 +53,12 @@ typedef	struct		s_colour
 	int				final_c_g;
 	int				final_c_r;
 	int				opacity;
-	int 			flag;
+	int				flag;
 }					t_colour;
 
 typedef struct		s_fract
 {
-	double 			cr;
+	double			cr;
 	double			ci;
 	double			pr;
 	double			pi;
@@ -72,11 +72,11 @@ typedef struct		s_fract
 	int				x;
 	int				y;
 	int				i;
-	char 			*string;
-	int 			flag;
-	int 			mouse;
-	double 			mr;
-	double 			mi;
+	char			*string;
+	int				flag;
+	int				mouse;
+	double			mr;
+	double			mi;
 }					t_fract;
 
 typedef struct		s_all
@@ -89,11 +89,11 @@ typedef struct		s_all
 typedef struct		s_data
 {
 	t_all			a;
-	int 			start;
-	int 			end;
+	int				start;
+	int				end;
 }					t_data;
 
-int 				ft_julia(t_data *d);
+int					ft_julia(t_data *d);
 int					ft_julia_3(t_data *d);
 int					ft_mandelbrot(t_data *d);
 void				ft_window(int code, t_all *all);
@@ -101,7 +101,7 @@ void				ft_find_fract(char *str, t_all *all);
 void				move_xy(t_all *all, double param);
 void				ft_change_blue(t_all *all, double param);
 void				ft_change_green(t_all *all, double param);
-void 				ft_change_red(t_all *all, double param);
+void				ft_change_red(t_all *all, double param);
 void				ft_std_fract_data(t_all *all);
 void				draw_pixel(int x, int y, t_data *d);
 void				*ft_fractal(void *data);
